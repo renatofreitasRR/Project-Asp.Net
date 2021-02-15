@@ -1,4 +1,4 @@
-#Projeto: CRUD Asp.NET Core, utilizando EntityFrameworkCore, Bootstrap e design pattern Model-View-Controller.
+Projeto: CRUD Asp.NET Core, utilizando EntityFrameworkCore, Bootstrap e design pattern Model-View-Controller.
 
 Recursos Utilizados no Desenvolvimento:
 Visual Studio 2019
