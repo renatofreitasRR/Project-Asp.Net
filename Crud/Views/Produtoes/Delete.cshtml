@@ -1,0 +1,60 @@
+﻿@model Crud.Models.Produto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Tem certeza que deseja deletar?</h1>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoriaId)
+        </dt>
+        @switch (Model.CategoriaId)
+        {
+            case 1:
+                <dd class="col-sm-10">
+                    Calçados
+                </dd>
+                break;
+            case 2:
+                <dd class="col-sm-10">
+                    Acessórios
+                </dd>
+                break;
+            case 3:
+                <dd class="col-sm-10">
+                    Roupas
+                </dd>
+                break;
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProdutoId" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <br>
+        <a asp-action="Index">Voltar para a lista</a>
+    </form>
+</div>
